@@ -1,0 +1,175 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const tratamentos = (await getCollection('tratamentos')).sort((a, b) => a.data.ordem - b.data.ordem);
+const portfolio = (await getCollection('portfolio')).sort((a, b) => a.data.ordem - b.data.ordem);
+---
+<Layout title="Studio Dental | Dr. Gabriel Carlos">
+
+  <section class="hero">
+    <svg class="hero-arc" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 50 60 Q 500 320 950 60" stroke="#C6A15B" stroke-width="1" fill="none" opacity="0.5"/>
+    </svg>
+    <div class="wrap hero-content">
+      <div class="eyebrow">Arapiraca · AL — Estética Dental</div>
+      <h1>Cada sorriso merece <span class="italic">precisão</span> e um toque de arte.</h1>
+      <p class="lead">Dr. Gabriel Carlos trabalha com facetas em resina, clareamento e restaurações complexas — unindo planejamento digital, microscópio e escaneamento 3D a um olhar artístico para cada caso.</p>
+      <div class="cta-row">
+        <a class="btn-primary" href="#contato">Agendar pelo WhatsApp</a>
+        <a class="btn-secondary" href="#tratamentos">Ver tratamentos</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>3D</strong>Escaneamento digital do sorriso</div>
+        <div><strong>Noturno</strong>Atendimento premium fora do horário comum</div>
+        <div><strong>1:1</strong>Planejamento individual, caso a caso</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="wrap sobre-grid">
+      <div class="sobre-photo">
+        <img src="https://static.wixstatic.com/media/2ce098_761ad40e2a6c4fcda801a59269f8ae6e~mv2.jpg" alt="Dr. Gabriel Carlos">
+      </div>
+      <div class="sobre-text">
+        <div class="eyebrow">Quem cuida do seu sorriso</div>
+        <h2>Dr. Gabriel Carlos</h2>
+        <p>Acredito que cada sorriso merece atenção, precisão e cuidado individual. Trabalho com estética dental e restaurações complexas — do clareamento às facetas em resina — sempre com planejamento detalhado.</p>
+        <p>Mais do que tratar dentes, meu objetivo é devolver confiança para sorrir, cuidando da sua saúde com previsibilidade, excelência e um toque de arte em cada detalhe.</p>
+        <div class="creds">
+          <div><b>Tecnologia</b> Microscópio operatório e escaneamento 3D</div>
+          <div><b>Foco</b> Facetas em resina, clareamento, dentística</div>
+          <div><b>Atendimento</b> Consultas e mentorias/cursos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="diferenciais">
+    <div class="wrap">
+      <div class="eyebrow">Por que Studio Dental</div>
+      <h2>Diferenciais pensados para o resultado <span class="italic">e</span> a experiência</h2>
+      <div class="dif-grid">
+        <div class="dif-card">
+          <div class="mark">Precisão</div>
+          <p>Planejamento digital e microscópio operatório para diagnósticos mais exatos e resultados previsíveis, caso a caso.</p>
+        </div>
+        <div class="dif-card">
+          <div class="mark">Horário premium</div>
+          <p>Atendimento noturno para quem não abre mão da rotina — sem filas de espera nem encaixes corridos.</p>
+        </div>
+        <div class="dif-card">
+          <div class="mark">Olhar artístico</div>
+          <p>Cada faceta e restauração é desenhada considerando a harmonia facial, não apenas a técnica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="consulta" id="consulta">
+    <div class="wrap">
+      <div class="consulta-top">
+        <div>
+          <div class="eyebrow">Antes de agendar seu tratamento</div>
+          <h2>Como funciona a consulta inicial</h2>
+        </div>
+        <div class="duracao"><strong>60 min</strong> de duração média</div>
+      </div>
+      <p style="margin-top:24px;color:var(--ivory-dim);max-width:620px;">Antes de qualquer tratamento, você passa por uma consulta inicial pensada para te conhecer de verdade — não só o seu sorriso.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Conversa com o Dr. Gabriel</h3>
+            <p>Antes de qualquer exame, o Dr. Gabriel te conhece: suas queixas, sua história e suas dúvidas — para entender o que realmente importa pra você.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Exame bucal com escaneamento 3D</h3>
+            <p>Só depois vocês vão à cadeira. O exame é feito com escâner 3D e fotografias, com apoio de inteligência artificial na identificação de problemas de saúde bucal.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Planejamento do novo sorriso em 3D</h3>
+            <p>Com os dados do exame, é possível planejar e visualizar em 3D como ficará o seu novo sorriso antes de iniciar qualquer tratamento.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>Plano de investimento sob medida</h3>
+            <p>Por fim, é montado o planejamento de investimento que melhor se encaixa na sua realidade, para que o tratamento ideal esteja ao seu alcance.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="consulta-note">
+        <p>Garantimos que todos conseguem realizar seu sonho aqui no Studio.<span class="italic">— Dr. Gabriel Carlos</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tratamentos">
+    <div class="wrap">
+      <div class="trat-head">
+        <div>
+          <div class="eyebrow">Tratamentos</div>
+          <h2>Soluções em estética e saúde bucal</h2>
+        </div>
+        <p>Do clareamento simples às reabilitações mais complexas, cada tratamento começa com uma avaliação individual.</p>
+      </div>
+      <div class="trat-grid">
+        {tratamentos.map(async (item) => {
+          const { Content } = await item.render();
+          return (
+            <div class="trat-card">
+              <div class="num">{item.data.rotulo}</div>
+              <h3>{item.data.titulo}</h3>
+              <p><Content /></p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="eyebrow">Resultados reais</div>
+      <h2>Portfólio de sorrisos transformados</h2>
+      <div class="port-grid">
+        {portfolio.map((item) => (
+          <div class="port-item">
+            <img src={item.data.imagem} alt={item.data.titulo} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="contato" id="contato">
+    <div class="wrap cont-grid">
+      <div>
+        <div class="eyebrow">Contato</div>
+        <h2>Seu novo sorriso em boas mãos</h2>
+        <p style="margin-top:20px;color:var(--ivory-dim);max-width:420px;">Fale pelo WhatsApp para agendar uma avaliação ou tirar dúvidas sobre o tratamento ideal para você.</p>
+        <div class="cta-row">
+          <a class="btn-primary" href="https://api.whatsapp.com/message/GAACR2RCP45PB1?autoload=1&app_absent=0">Whatsapp | Consultas</a>
+          <a class="btn-secondary" href="https://www.instagram.com/studiodent.al">Instagram</a>
+        </div>
+      </div>
+      <div class="cont-list">
+        <div><b>Endereço</b><span>Empresarial Ônix — Av. Deputada Ceci Cunha, Arapiraca - AL</span></div>
+        <div><b>Horário</b><span>Atendimento noturno premium, com hora marcada</span></div>
+        <div><b>Whatsapp</b><span>Consultas e mentorias/cursos</span></div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
