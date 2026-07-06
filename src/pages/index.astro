@@ -10,15 +10,20 @@ const faq = (await getCollection('faq')).sort((a, b) => a.data.ordem - b.data.or
 
   <section class="hero">
     <svg class="hero-arc" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 50 60 Q 500 320 950 60" stroke="#C6A15B" stroke-width="1" fill="none" opacity="0.5"/>
+      <path d="M 50 60 Q 500 320 950 60" stroke="#A9803F" stroke-width="1" fill="none" opacity="0.6"/>
     </svg>
-    <div class="wrap hero-content">
-      <div class="eyebrow">Arapiraca · AL — Estética Dental</div>
-      <h1>Cada sorriso merece <span class="italic">precisão</span> e um toque de arte.</h1>
-      <p class="lead">A clínica atende homens e mulheres que buscam soluções odontológicas seguras, eficientes e compatíveis com uma rotina exigente. É ideal para profissionais, empresários e pessoas que valorizam tempo, conforto e resultados duradouros. Se você sente vergonha ao sorrir, convive com dores, mau hálito ou não dispõe de tempo para tratamentos longos e fragmentados, o Studio Dental foi pensado para você.</p>
-      <div class="cta-row">
-        <a class="btn-primary" href="#contato">Agendar pelo WhatsApp</a>
-        <a class="btn-secondary" href="#tratamentos">Ver tratamentos</a>
+    <div class="wrap hero-grid">
+      <div class="hero-content">
+        <div class="eyebrow">Arapiraca · AL — Estética Dental</div>
+        <h1>Cada sorriso merece <span class="italic">precisão</span> e um toque de arte.</h1>
+        <p class="lead">A clínica atende homens e mulheres que buscam soluções odontológicas seguras, eficientes e compatíveis com uma rotina exigente. É ideal para profissionais, empresários e pessoas que valorizam tempo, conforto e resultados duradouros. Se você sente vergonha ao sorrir, convive com dores, mau hálito ou não dispõe de tempo para tratamentos longos e fragmentados, o Studio Dental foi pensado para você.</p>
+        <div class="cta-row">
+          <a class="btn-primary" href="#contato">Agendar pelo WhatsApp</a>
+          <a class="btn-secondary" href="#tratamentos">Ver tratamentos</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="/images/dr-gabriel-atendimento.jpg" alt="Dr. Gabriel Carlos atendendo paciente" style="object-position: center 25%;">
       </div>
     </div>
   </section>
@@ -95,7 +100,7 @@ const faq = (await getCollection('faq')).sort((a, b) => a.data.ordem - b.data.or
   <section class="sobre" id="sobre">
     <div class="wrap sobre-grid">
       <div class="sobre-photo">
-        <img src="/images/dr-gabriel-atendimento.jpg" alt="Dr. Gabriel Carlos atendendo paciente" style="object-position: center 25%;">
+        <img src="/images/dr-gabriel-palestra.jpg" alt="Dr. Gabriel Carlos" style="object-position: center 20%;">
       </div>
       <div class="sobre-text">
         <div class="eyebrow">Quem cuida do seu sorriso</div>
