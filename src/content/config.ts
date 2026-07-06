@@ -18,4 +18,12 @@ const portfolio = defineCollection({
   }),
 });
 
-export const collections = { tratamentos, portfolio };
+const faq = defineCollection({
+  type: 'content',
+  schema: z.object({
+    pergunta: z.string(),
+    ordem: z.number().default(0),
+  }),
+});
+
+export const collections = { tratamentos, portfolio, faq };

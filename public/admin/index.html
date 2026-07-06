@@ -9,6 +9,52 @@
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
+    var TratamentoPreview = createClass({
+      render: function () {
+        var e = this.props.entry;
+        return h(
+          'div',
+          { style: { background: '#14120F', minHeight: '100vh', padding: '48px', fontFamily: 'sans-serif' } },
+          h(
+            'div',
+            { style: { background: '#1B1815', border: '1px solid rgba(243,238,228,0.12)', padding: '40px', maxWidth: '420px' } },
+            h('div', { style: { color: '#C6A15B', fontSize: '12px', letterSpacing: '2px', fontWeight: 'bold' } }, e.getIn(['data', 'rotulo'])),
+            h('h2', { style: { color: '#F3EEE4', marginTop: '14px', fontSize: '22px' } }, e.getIn(['data', 'titulo'])),
+            h('div', { style: { color: '#C9C3B6', marginTop: '12px', fontSize: '14px', lineHeight: '1.6' } }, this.props.widgetFor('body'))
+          )
+        );
+      },
+    });
+    CMS.registerPreviewTemplate('tratamentos', TratamentoPreview);
+
+    var PortfolioPreview = createClass({
+      render: function () {
+        var e = this.props.entry;
+        var img = e.getIn(['data', 'imagem']);
+        return h(
+          'div',
+          { style: { background: '#14120F', minHeight: '100vh', padding: '48px', fontFamily: 'sans-serif' } },
+          h(
+            'div',
+            { style: { maxWidth: '280px' } },
+            h('div', {
+              style: {
+                aspectRatio: '3/4',
+                background: '#22201B',
+                border: '1px solid rgba(243,238,228,0.12)',
+                backgroundImage: img ? 'url(' + img + ')' : 'none',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              },
+            }),
+            h('div', { style: { color: '#F3EEE4', marginTop: '14px', fontSize: '14px' } }, e.getIn(['data', 'titulo']))
+          )
+        );
+      },
+    });
+    CMS.registerPreviewTemplate('portfolio', PortfolioPreview);
+  </script>
+  <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", (user) => {
         if (!user) {

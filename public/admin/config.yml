@@ -23,6 +23,20 @@ collections:
       - { label: "Ordem de exibição", name: "ordem", widget: "number", default: 0 }
       - { label: "Descrição", name: "body", widget: "text" }
 
+  - name: "faq"
+    label: "Perguntas Frequentes"
+    label_singular: "Pergunta"
+    folder: "src/content/faq"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Pergunta", name: "pergunta", widget: "string" }
+      - { label: "Ordem de exibição", name: "ordem", widget: "number", default: 0 }
+      - { label: "Resposta", name: "body", widget: "text" }
+
   - name: "portfolio"
     label: "Portfólio"
     label_singular: "Caso"

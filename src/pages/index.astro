@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 
 const tratamentos = (await getCollection('tratamentos')).sort((a, b) => a.data.ordem - b.data.ordem);
 const portfolio = (await getCollection('portfolio')).sort((a, b) => a.data.ordem - b.data.ordem);
+const faq = (await getCollection('faq')).sort((a, b) => a.data.ordem - b.data.ordem);
 ---
 <Layout title="Studio Dental | Dr. Gabriel Carlos">
 
@@ -14,55 +15,10 @@ const portfolio = (await getCollection('portfolio')).sort((a, b) => a.data.ordem
     <div class="wrap hero-content">
       <div class="eyebrow">Arapiraca · AL — Estética Dental</div>
       <h1>Cada sorriso merece <span class="italic">precisão</span> e um toque de arte.</h1>
-      <p class="lead">Dr. Gabriel Carlos trabalha com facetas em resina, clareamento e restaurações complexas — unindo planejamento digital, microscópio e escaneamento 3D a um olhar artístico para cada caso.</p>
+      <p class="lead">A clínica atende homens e mulheres que buscam soluções odontológicas seguras, eficientes e compatíveis com uma rotina exigente. É ideal para profissionais, empresários e pessoas que valorizam tempo, conforto e resultados duradouros. Se você sente vergonha ao sorrir, convive com dores, mau hálito ou não dispõe de tempo para tratamentos longos e fragmentados, o Studio Dental foi pensado para você.</p>
       <div class="cta-row">
         <a class="btn-primary" href="#contato">Agendar pelo WhatsApp</a>
         <a class="btn-secondary" href="#tratamentos">Ver tratamentos</a>
-      </div>
-      <div class="hero-meta">
-        <div><strong>3D</strong>Escaneamento digital do sorriso</div>
-        <div><strong>Noturno</strong>Atendimento premium fora do horário comum</div>
-        <div><strong>1:1</strong>Planejamento individual, caso a caso</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sobre" id="sobre">
-    <div class="wrap sobre-grid">
-      <div class="sobre-photo">
-        <img src="https://static.wixstatic.com/media/2ce098_761ad40e2a6c4fcda801a59269f8ae6e~mv2.jpg" alt="Dr. Gabriel Carlos">
-      </div>
-      <div class="sobre-text">
-        <div class="eyebrow">Quem cuida do seu sorriso</div>
-        <h2>Dr. Gabriel Carlos</h2>
-        <p>Acredito que cada sorriso merece atenção, precisão e cuidado individual. Trabalho com estética dental e restaurações complexas — do clareamento às facetas em resina — sempre com planejamento detalhado.</p>
-        <p>Mais do que tratar dentes, meu objetivo é devolver confiança para sorrir, cuidando da sua saúde com previsibilidade, excelência e um toque de arte em cada detalhe.</p>
-        <div class="creds">
-          <div><b>Tecnologia</b> Microscópio operatório e escaneamento 3D</div>
-          <div><b>Foco</b> Facetas em resina, clareamento, dentística</div>
-          <div><b>Atendimento</b> Consultas e mentorias/cursos</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="diferenciais">
-    <div class="wrap">
-      <div class="eyebrow">Por que Studio Dental</div>
-      <h2>Diferenciais pensados para o resultado <span class="italic">e</span> a experiência</h2>
-      <div class="dif-grid">
-        <div class="dif-card">
-          <div class="mark">Precisão</div>
-          <p>Planejamento digital e microscópio operatório para diagnósticos mais exatos e resultados previsíveis, caso a caso.</p>
-        </div>
-        <div class="dif-card">
-          <div class="mark">Horário premium</div>
-          <p>Atendimento noturno para quem não abre mão da rotina — sem filas de espera nem encaixes corridos.</p>
-        </div>
-        <div class="dif-card">
-          <div class="mark">Olhar artístico</div>
-          <p>Cada faceta e restauração é desenhada considerando a harmonia facial, não apenas a técnica.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -90,7 +46,7 @@ const portfolio = (await getCollection('portfolio')).sort((a, b) => a.data.ordem
           <div class="step-num">2</div>
           <div class="step-body">
             <h3>Exame bucal com escaneamento 3D</h3>
-            <p>Só depois vocês vão à cadeira. O exame é feito com escâner 3D e fotografias, com apoio de inteligência artificial na identificação de problemas de saúde bucal.</p>
+            <p>Só depois vocês vão à cadeira. O exame é feito com SCANNER 3D com IA e fotografias, identificando problemas de saúde bucal.</p>
           </div>
         </div>
         <div class="step">
@@ -115,6 +71,41 @@ const portfolio = (await getCollection('portfolio')).sort((a, b) => a.data.ordem
     </div>
   </section>
 
+  <section id="diferenciais">
+    <div class="wrap">
+      <div class="eyebrow">Por que Studio Dental</div>
+      <h2>Diferenciais pensados para o resultado <span class="italic">e</span> a experiência</h2>
+      <div class="dif-grid">
+        <div class="dif-card">
+          <div class="mark">Precisão</div>
+          <p>Planejamento digital e microscópio operatório para diagnósticos mais exatos e resultados previsíveis, caso a caso.</p>
+        </div>
+        <div class="dif-card">
+          <div class="mark">Horário premium</div>
+          <p>Atendimento noturno para quem não abre mão da rotina — sem filas de espera nem encaixes corridos.</p>
+        </div>
+        <div class="dif-card">
+          <div class="mark">Olhar artístico</div>
+          <p>Cada faceta e restauração é desenhada considerando a harmonia facial, não apenas a técnica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="wrap sobre-grid">
+      <div class="sobre-photo">
+        <img src="/images/dr-gabriel-atendimento.jpg" alt="Dr. Gabriel Carlos atendendo paciente" style="object-position: center 25%;">
+      </div>
+      <div class="sobre-text">
+        <div class="eyebrow">Quem cuida do seu sorriso</div>
+        <h2>Dr. Gabriel Carlos</h2>
+        <p>Muito além de transformar sorrisos, minha grande paixão é cuidar de pessoas através de uma Odontologia Estética pautada pela naturalidade e pelo respeito à essência de cada paciente. Unindo a sensibilidade humana ao que há de mais avançado em tecnologia dentro do meu Studio Dental, busco constantemente a inovação para entregar resultados precisos e surpreendentes. Essa mesma busca pela excelência me move a atuar como mentor de outros dentistas, dividindo conhecimento e guiando profissionais que, assim como eu, têm o compromisso de entregar o mais alto padrão de qualidade na profissão.</p>
+        <p class="italic" style="display:block;margin-top:16px;">— Dr. Gabriel Carlos</p>
+      </div>
+    </div>
+  </section>
+
   <section id="tratamentos">
     <div class="wrap">
       <div class="trat-head">
@@ -122,7 +113,7 @@ const portfolio = (await getCollection('portfolio')).sort((a, b) => a.data.ordem
           <div class="eyebrow">Tratamentos</div>
           <h2>Soluções em estética e saúde bucal</h2>
         </div>
-        <p>Do clareamento simples às reabilitações mais complexas, cada tratamento começa com uma avaliação individual.</p>
+        <p>Da resolução de dores, cáries e processos inflamatórios à conquista de uma estética harmônica e únicas. Aqui, cada tratamento é precedido por uma avaliação estritamente individualizada.</p>
       </div>
       <div class="trat-grid">
         {tratamentos.map(async (item) => {
@@ -149,6 +140,24 @@ const portfolio = (await getCollection('portfolio')).sort((a, b) => a.data.ordem
             <img src={item.data.imagem} alt={item.data.titulo} />
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="eyebrow">Dúvidas frequentes</div>
+      <h2>Perguntas frequentes</h2>
+      <div class="faq-list">
+        {faq.map(async (item) => {
+          const { Content } = await item.render();
+          return (
+            <details class="faq-item">
+              <summary>{item.data.pergunta}</summary>
+              <div class="faq-answer"><Content /></div>
+            </details>
+          );
+        })}
       </div>
     </div>
   </section>
