@@ -14,13 +14,13 @@ const { title } = Astro.props;
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style is:global>
   :root{
-    --bg: #14120F;
-    --bg-soft: #1B1815;
-    --ivory: #F3EEE4;
-    --ivory-dim: #C9C3B6;
-    --gold: #C6A15B;
-    --gold-soft: #8A7852;
-    --line: rgba(243,238,228,0.12);
+    --bg: #000000;
+    --bg-soft: #080808;
+    --ivory: #BDBDBD;
+    --ivory-dim: #8E8E8E;
+    --gold: #5DADE2;
+    --gold-soft: #2F78A8;
+    --line: rgba(189,189,189,0.16);
     --serif: 'Fraunces', serif;
     --sans: 'Work Sans', sans-serif;
   }
@@ -39,7 +39,7 @@ const { title } = Astro.props;
   h2{font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.15;}
   h3{font-size:1.3rem;}
   .italic{font-style:italic;color:var(--gold);}
-  header{position:sticky;top:0;z-index:50;background:rgba(20,18,15,0.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  header{position:sticky;top:0;z-index:50;background:rgba(0,0,0,0.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
   nav.wrap{display:flex;align-items:center;justify-content:space-between;height:84px;}
   .logo{font-family:var(--serif);font-size:1.3rem;letter-spacing:0.02em;}
   .logo span{color:var(--gold);}
@@ -66,7 +66,7 @@ const { title } = Astro.props;
   .sobre{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .sobre-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:center;}
   @media(max-width:800px){.sobre-grid{grid-template-columns:1fr;gap:40px;}}
-  .sobre-photo{aspect-ratio:3/4;background:#22201B;border:1px solid var(--line);overflow:hidden;position:relative;}
+  .sobre-photo{aspect-ratio:3/4;background:#111111;border:1px solid var(--line);overflow:hidden;position:relative;}
   .sobre-photo img{width:100%;height:100%;object-fit:cover;}
   .sobre-text p{color:var(--ivory-dim);margin-top:20px;font-size:1.02rem;}
   .creds{margin-top:34px;display:flex;flex-direction:column;gap:14px;}
@@ -91,7 +91,7 @@ const { title } = Astro.props;
   @media(max-width:720px){.step{grid-template-columns:40px 1fr;gap:18px;} .step-num{width:40px;height:40px;font-size:0.95rem;}}
   .step-body h3{font-size:1.15rem;}
   .step-body p{margin-top:10px;color:var(--ivory-dim);font-size:0.95rem;max-width:560px;}
-  .consulta-note{margin-top:56px;padding:28px 32px;border:1px solid var(--gold-soft);background:rgba(198,161,91,0.06);}
+  .consulta-note{margin-top:56px;padding:28px 32px;border:1px solid var(--gold-soft);background:rgba(166,166,166,0.08);}
   .consulta-note p{color:var(--ivory);font-size:0.98rem;margin:0;}
   .consulta-note .italic{display:block;margin-top:2px;}
   .trat-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;}
@@ -99,13 +99,13 @@ const { title } = Astro.props;
   .trat-grid{margin-top:60px;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
   @media(max-width:800px){.trat-grid{grid-template-columns:1fr;}}
   .trat-card{background:var(--bg-soft);padding:40px;transition:background .25s;}
-  .trat-card:hover{background:#221E18;}
+  .trat-card:hover{background:#101010;}
   .trat-card .num{font-family:var(--serif);color:var(--gold-soft);font-size:0.85rem;letter-spacing:0.1em;}
   .trat-card h3{margin-top:14px;}
   .trat-card p{margin-top:12px;color:var(--ivory-dim);font-size:0.93rem;}
   .port-grid{margin-top:60px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
   @media(max-width:800px){.port-grid{grid-template-columns:repeat(2,1fr);}}
-  .port-item{aspect-ratio:3/4;overflow:hidden;background:#22201B;border:1px solid var(--line);position:relative;}
+  .port-item{aspect-ratio:3/4;overflow:hidden;background:#111111;border:1px solid var(--line);position:relative;}
   .port-item img{width:100%;height:100%;object-fit:cover;filter:saturate(0.9);transition:transform .5s;}
   .port-item:hover img{transform:scale(1.06);}
   .contato{background:var(--bg-soft);border-top:1px solid var(--line);}
